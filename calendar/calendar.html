@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC PAGE INFORMATION
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="School calendar of Taktsang Academy, Lamgong, Paro, Bhutan."
+    >
+
+    <title>
+        School Calendar | Taktsang Academy
+    </title>
+
+
+    <!-- =====================================================
+         CALENDAR CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="calendar.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SECTION 01
+         TEMPORARY HEADER
+         
+         NOTE:
+         The final team-wide header will be integrated later.
+    ====================================================== -->
+
+    <header class="calendar-header">
+
+        <div class="header-container">
+
+
+            <!-- SCHOOL LOGO / BRAND -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-mark">
+                    TA
+                </span>
+
+                <span class="logo-text">
+                    Taktsang Academy
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="calendar-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    Discover
+                </a>
+
+                <a href="founders.html">
+                    Founders
+                </a>
+
+                <a
+                    href="calendar.html"
+                    class="active"
+                >
+                    Calendar
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         SECTION 02
+         CALENDAR HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="calendar-hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    TAKTSANG ACADEMY
+                </span>
+
+
+                <h1>
+                    School Calendar
+                </h1>
+
+
+                <p>
+                    Stay connected with important dates,
+                    activities, celebrations and events
+                    across the Taktsang Academy community.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SECTION 03
+             CALENDAR
+        ================================================== -->
+
+        <section class="calendar-section">
+
+            <div class="calendar-container">
+
+
+                <!-- =========================================
+                     CALENDAR HEADER
+                ========================================== -->
+
+                <div class="calendar-top">
+
+
+                    <!-- PREVIOUS MONTH -->
+
+                    <button
+                        id="previousMonth"
+                        class="month-button"
+                        aria-label="Previous month"
+                    >
+                        ←
+                    </button>
+
+
+                    <!-- CURRENT MONTH -->
+
+                    <div class="month-title">
+
+                        <h2 id="monthYear">
+                            September 2026
+                        </h2>
+
+
+                        <button
+                            id="todayButton"
+                            class="today-button"
+                        >
+                            Today
+                        </button>
+
+                    </div>
+
+
+                    <!-- NEXT MONTH -->
+
+                    <button
+                        id="nextMonth"
+                        class="month-button"
+                        aria-label="Next month"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     SECTION 04
+                     EVENT FILTER
+                ========================================== -->
+
+                <div class="calendar-tools">
+
+                    <label
+                        for="eventFilter"
+                    >
+                        Filter events:
+                    </label>
+
+
+                    <select
+                        id="eventFilter"
+                    >
+
+                        <option value="all">
+                            All Events
+                        </option>
+
+                        <option value="academic">
+                            Academic
+                        </option>
+
+                        <option value="sports">
+                            Sports
+                        </option>
+
+                        <option value="cultural">
+                            Cultural
+                        </option>
+
+                        <option value="wellbeing">
+                            Wellbeing
+                        </option>
+
+                        <option value="holiday">
+                            School Holiday
+                        </option>
+
+                        <option value="bhutan-holiday">
+                            Bhutan Public Holiday
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     SECTION 05
+                     CALENDAR GRID
+                ========================================== -->
+
+                <div class="calendar-card">
+
+
+                    <!-- DAYS OF WEEK -->
+
+                    <div class="weekdays">
+
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                        <div>Sun</div>
+
+                    </div>
+
+
+                    <!-- DATES CREATED BY JAVASCRIPT -->
+
+                    <div
+                        id="calendarGrid"
+                        class="calendar-grid"
+                    >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     SECTION 06
+                     EVENT INFORMATION PANEL
+                ========================================== -->
+
+                <div
+                    id="eventPanel"
+                    class="event-panel"
+                >
+
+                    <div class="event-panel-empty">
+
+                        <span class="event-icon">
+                            ✦
+                        </span>
+
+
+                        <h3>
+                            Select a date
+                        </h3>
+
+
+                        <p>
+                            Choose a date from the calendar
+                            to view scheduled events.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     SECTION 07
+                     CALENDAR LEGEND
+                ========================================== -->
+
+                <div class="calendar-legend">
+
+                    <div class="legend-title">
+                        Event categories
+                    </div>
+
+
+                    <div class="legend-items">
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot academic-dot"></span>
+
+                            Academic
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot sports-dot"></span>
+
+                            Sports
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot cultural-dot"></span>
+
+                            Cultural
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot wellbeing-dot"></span>
+
+                            Wellbeing
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot holiday-dot"></span>
+
+                            School Holiday
+
+                        </div>
+
+
+                        <div class="legend-item">
+
+                            <span class="legend-dot bhutan-dot"></span>
+
+                            Bhutan Public Holiday
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         SECTION 08
+         TEMPORARY FOOTER
+         
+         NOTE:
+         Final footer will be integrated later by the team.
+    ====================================================== -->
+
+    <footer class="calendar-footer">
+
+        <div>
+
+            <strong>
+                Taktsang Academy
+            </strong>
+
+            <p>
+                Lamgong, Paro, Bhutan
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                © 2025 Taktsang Academy
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="calendar.js"
+    ></script>
+
+
+</body>
+
+</html>

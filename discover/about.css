@@ -1,0 +1,2141 @@
+/* =========================================================
+   TAKTSANG ACADEMY
+   ABOUT / DISCOVER PAGE
+   CSS FILE
+   ========================================================= */
+
+
+/* =========================================================
+   01. COLOUR SYSTEM
+   ========================================================= */
+
+:root {
+
+    --primary: #174A3A;
+
+    --secondary: #5F7650;
+
+    --accent: #D88924;
+
+    --background: #F7F3E8;
+
+    --surface: #E9E2D3;
+
+    --text: #202923;
+
+    --white: #FFFDF8;
+
+
+    --heading:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    --body:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+}
+
+
+
+/* =========================================================
+   02. BASIC RESET
+   ========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+    font-family:
+        var(--body);
+
+}
+
+
+img {
+
+    display:
+        block;
+
+    max-width:
+        100%;
+
+}
+
+
+button,
+a {
+
+    font-family:
+        inherit;
+
+}
+
+
+
+/* =========================================================
+   03. HEADER
+   ========================================================= */
+
+.site-header {
+
+    position:
+        fixed;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 1000;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        15px 5vw;
+
+    background:
+        rgba(
+            247,
+            243,
+            232,
+            0.94
+        );
+
+    backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid
+        rgba(
+            32,
+            41,
+            35,
+            0.1
+        );
+
+}
+
+
+.logo-area {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        var(--primary);
+
+    text-decoration:
+        none;
+
+}
+
+
+.logo-area img {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    object-fit:
+        contain;
+
+}
+
+
+.logo-area strong {
+
+    display:
+        block;
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        18px;
+
+}
+
+
+.logo-area span {
+
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        var(--secondary);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.main-navigation {
+
+    display:
+        flex;
+
+    gap:
+        28px;
+
+}
+
+
+.main-navigation a {
+
+    color:
+        var(--text);
+
+    text-decoration:
+        none;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.main-navigation a:hover {
+
+    color:
+        var(--accent);
+
+}
+
+
+.mobile-menu-button {
+
+    display:
+        none;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--primary);
+
+    font-size:
+        24px;
+
+    cursor:
+        pointer;
+
+}
+
+
+
+/* =========================================================
+   04. MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-navigation {
+
+    display:
+        none;
+
+    position:
+        fixed;
+
+    top:
+        78px;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 999;
+
+    padding:
+        20px;
+
+    background:
+        var(--white);
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.1
+        );
+
+}
+
+
+.mobile-navigation.open {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        18px;
+
+}
+
+
+.mobile-navigation a {
+
+    color:
+        var(--primary);
+
+    text-decoration:
+        none;
+
+    font-size:
+        14px;
+
+}
+
+
+
+/* =========================================================
+   05. GENERAL SECTION LABEL
+   ========================================================= */
+
+.section-label {
+
+    margin-bottom:
+        22px;
+
+    color:
+        var(--accent);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        3px;
+
+}
+
+
+.section-label.dark {
+
+    color:
+        var(--accent);
+
+}
+
+
+.gold-line {
+
+    width:
+        55px;
+
+    height:
+        2px;
+
+    margin:
+        25px 0;
+
+    background:
+        var(--accent);
+
+}
+
+
+
+/* =========================================================
+   06. HERO SECTION
+   ========================================================= */
+
+.hero-section {
+
+    position:
+        relative;
+
+    min-height:
+        100vh;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    overflow:
+        hidden;
+
+    color:
+        var(--white);
+
+}
+
+
+.hero-image {
+
+    position:
+        absolute;
+
+    inset: 0;
+
+}
+
+
+.hero-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+.hero-overlay {
+
+    position:
+        absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(
+                23,
+                74,
+                58,
+                0.95
+            ),
+            rgba(
+                23,
+                74,
+                58,
+                0.58
+            ),
+            rgba(
+                23,
+                74,
+                58,
+                0.2
+            )
+        );
+
+}
+
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index: 2;
+
+    max-width:
+        850px;
+
+    padding:
+        140px 7vw 100px;
+
+}
+
+
+.hero-content h1 {
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        clamp(
+            65px,
+            10vw,
+            130px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        0.88;
+
+}
+
+
+.hero-content h1 em {
+
+    color:
+        var(--accent);
+
+    font-style:
+        italic;
+
+}
+
+
+.hero-description {
+
+    max-width:
+        600px;
+
+    margin:
+        35px 0;
+
+    color:
+        rgba(
+            255,
+            253,
+            248,
+            0.78
+        );
+
+    font-size:
+        14px;
+
+    line-height:
+        1.9;
+
+}
+
+
+.primary-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+    padding:
+        15px 20px;
+
+    background:
+        var(--accent);
+
+    color:
+        var(--primary);
+
+    text-decoration:
+        none;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.primary-button:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.hero-location {
+
+    position:
+        absolute;
+
+    right:
+        5vw;
+
+    bottom:
+        35px;
+
+    z-index:
+        2;
+
+    color:
+        rgba(
+            255,
+            253,
+            248,
+            0.6
+        );
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+
+/* =========================================================
+   07. STORY SECTION
+   ========================================================= */
+
+.story-section {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    max-width:
+        1400px;
+
+    margin:
+        auto;
+
+}
+
+
+.story-image {
+
+    position:
+        relative;
+
+    min-height:
+        650px;
+
+    overflow:
+        hidden;
+
+}
+
+
+.story-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+.image-caption {
+
+    position:
+        absolute;
+
+    bottom:
+        25px;
+
+    left:
+        25px;
+
+    padding:
+        12px 15px;
+
+    background:
+        rgba(
+            23,
+            74,
+            58,
+            0.9
+        );
+
+    color:
+        var(--white);
+
+    font-size:
+        8px;
+
+    line-height:
+        1.6;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.story-content {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    padding:
+        80px;
+
+}
+
+
+.story-content h2 {
+
+    color:
+        var(--primary);
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            80px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        0.95;
+
+}
+
+
+.story-content h2 em {
+
+    color:
+        var(--accent);
+
+    font-style:
+        italic;
+
+}
+
+
+.story-content > p {
+
+    max-width:
+        540px;
+
+    margin-bottom:
+        18px;
+
+    color:
+        rgba(
+            32,
+            41,
+            35,
+            0.7
+        );
+
+    font-size:
+        14px;
+
+    line-height:
+        1.9;
+
+}
+
+
+.story-signature {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+
+    margin-top:
+        25px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        rgba(
+            32,
+            41,
+            35,
+            0.12
+        );
+
+}
+
+
+.story-signature strong {
+
+    color:
+        var(--primary);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.story-signature span {
+
+    color:
+        var(--secondary);
+
+    font-size:
+        12px;
+
+}
+
+
+
+/* =========================================================
+   08. WHY TAKTSANG
+   ========================================================= */
+
+.why-section {
+
+    padding:
+        120px 7vw;
+
+    background:
+        var(--primary);
+
+    color:
+        var(--white);
+
+}
+
+
+.why-heading {
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto 70px;
+
+    text-align:
+        center;
+
+}
+
+
+.why-heading h2 {
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            78px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        0.95;
+
+}
+
+
+.why-heading h2 em {
+
+    color:
+        var(--accent);
+
+    font-style:
+        italic;
+
+}
+
+
+.why-heading > p:last-child {
+
+    max-width:
+        620px;
+
+    margin:
+        30px auto 0;
+
+    color:
+        rgba(
+            255,
+            253,
+            248,
+            0.65
+        );
+
+    font-size:
+        13px;
+
+    line-height:
+        1.9;
+
+}
+
+
+.why-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    max-width:
+        1300px;
+
+    margin:
+        auto;
+
+    gap:
+        14px;
+
+}
+
+
+.why-card {
+
+    position:
+        relative;
+
+    min-height:
+        300px;
+
+    padding:
+        30px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            253,
+            248,
+            0.13
+        );
+
+    background:
+        rgba(
+            255,
+            253,
+            248,
+            0.04
+        );
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+
+}
+
+
+.why-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    background:
+        rgba(
+            255,
+            253,
+            248,
+            0.09
+        );
+
+}
+
+
+.why-card.featured {
+
+    background:
+        var(--accent);
+
+    color:
+        var(--primary);
+
+}
+
+
+.why-number {
+
+    position:
+        absolute;
+
+    top:
+        20px;
+
+    right:
+        20px;
+
+    font-size:
+        8px;
+
+    opacity:
+        0.5;
+
+}
+
+
+.why-icon {
+
+    margin:
+        35px 0;
+
+    color:
+        var(--accent);
+
+    font-size:
+        28px;
+
+}
+
+
+.why-card.featured .why-icon {
+
+    color:
+        var(--primary);
+
+}
+
+
+.why-card h3 {
+
+    margin-bottom:
+        15px;
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        25px;
+
+    font-weight:
+        400;
+
+}
+
+
+.why-card p {
+
+    color:
+        rgba(
+            255,
+            253,
+            248,
+            0.62
+        );
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+
+}
+
+
+.why-card.featured p {
+
+    color:
+        rgba(
+            32,
+            41,
+            35,
+            0.65
+        );
+
+}
+
+
+
+/* =========================================================
+   FIVE AREAS OF WELLBEING — INTRODUCTION
+========================================================= */
+
+.wellbeing-intro {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 120px 6%;
+
+    display: grid;
+
+    grid-template-columns: 0.5fr 1.5fr;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+
+.wellbeing-intro-label {
+
+    color: var(--secondary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.wellbeing-intro-content {
+
+    max-width: 780px;
+
+}
+
+
+.wellbeing-intro-content h2 {
+
+    margin: 18px 0 28px;
+
+    color: var(--primary);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+}
+
+
+.wellbeing-intro-content p {
+
+    max-width: 680px;
+
+    margin-bottom: 18px;
+
+    color: #59625b;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   WELLBEING BUTTON
+========================================================= */
+
+.wellbeing-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 22px;
+
+    padding: 15px 24px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.wellbeing-button span {
+
+    color: var(--accent);
+
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.wellbeing-button:hover {
+
+    background: var(--secondary);
+
+    transform: translateY(-3px);
+
+}
+
+
+.wellbeing-button:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .wellbeing-intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 85px 7%;
+
+    }
+
+}
+/* =========================================================
+   10. TAKTSANG IDENTITY
+   ========================================================= */
+
+.identity-section {
+
+    padding:
+        120px 7vw;
+
+    background:
+        var(--surface);
+
+}
+
+
+.identity-intro {
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto 55px;
+
+    text-align:
+        center;
+
+}
+
+
+.identity-intro h2 {
+
+    color:
+        var(--primary);
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        clamp(
+            55px,
+            7vw,
+            90px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        0.9;
+
+}
+
+
+.identity-intro h2 em {
+
+    color:
+        var(--accent);
+
+    font-style:
+        italic;
+
+}
+
+
+.identity-intro > p:last-child {
+
+    max-width:
+        600px;
+
+    margin:
+        30px auto 0;
+
+    color:
+        rgba(
+            32,
+            41,
+            35,
+            0.65
+        );
+
+    font-size:
+        13px;
+
+    line-height:
+        1.9;
+
+}
+
+
+
+/* =========================================================
+   11. IDENTITY BUTTONS
+   ========================================================= */
+
+.identity-navigation {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+}
+
+
+.identity-button {
+
+    min-height:
+        160px;
+
+    padding:
+        25px;
+
+    border:
+        1px solid
+        rgba(
+            32,
+            41,
+            35,
+            0.13
+        );
+
+    background:
+        var(--white);
+
+    color:
+        var(--primary);
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.identity-button:hover {
+
+    background:
+        var(--primary);
+
+    color:
+        var(--white);
+
+}
+
+
+.identity-button.active {
+
+    background:
+        var(--accent);
+
+    color:
+        var(--primary);
+
+}
+
+
+.identity-button span {
+
+    display:
+        block;
+
+    margin-bottom:
+        30px;
+
+    font-size:
+        8px;
+
+    opacity:
+        0.55;
+
+}
+
+
+.identity-button strong {
+
+    display:
+        block;
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        30px;
+
+    font-weight:
+        400;
+
+    font-style:
+        italic;
+
+}
+
+
+.identity-button small {
+
+    display:
+        block;
+
+    margin-top:
+        7px;
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        1px;
+
+    text-transform:
+        uppercase;
+
+    opacity:
+        0.6;
+
+}
+
+
+
+/* =========================================================
+   12. IDENTITY DISPLAY
+   ========================================================= */
+
+.identity-display {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    max-width:
+        1100px;
+
+    min-height:
+        480px;
+
+    margin:
+        10px auto 0;
+
+    background:
+        var(--white);
+
+}
+
+
+.identity-display-image {
+
+    position:
+        relative;
+
+    min-height:
+        480px;
+
+    overflow:
+        hidden;
+
+}
+
+
+.identity-display-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.7s ease;
+
+}
+
+
+.identity-display-image span {
+
+    position:
+        absolute;
+
+    top:
+        25px;
+
+    left:
+        25px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--accent);
+
+    color:
+        var(--primary);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+}
+
+
+.identity-display-content {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    padding:
+        55px;
+
+}
+
+
+.identity-display-content h3 {
+
+    color:
+        var(--primary);
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        clamp(
+            55px,
+            6vw,
+            85px
+        );
+
+    font-weight:
+        400;
+
+    font-style:
+        italic;
+
+}
+
+
+.identity-display-content > p:not(.section-label) {
+
+    max-width:
+        500px;
+
+    color:
+        rgba(
+            32,
+            41,
+            35,
+            0.65
+        );
+
+    font-size:
+        13px;
+
+    line-height:
+        2;
+
+}
+
+
+.identity-values {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.identity-values span {
+
+    padding:
+        8px 13px;
+
+    border:
+        1px solid
+        rgba(
+            23,
+            74,
+            58,
+            0.15
+        );
+
+    border-radius:
+        30px;
+
+    color:
+        var(--primary);
+
+    font-size:
+        9px;
+
+}
+
+
+
+/* =========================================================
+   13. CLOSING
+   ========================================================= */
+
+.closing-section {
+
+    padding:
+        130px 25px;
+
+    background:
+        var(--primary);
+
+    color:
+        var(--white);
+
+    text-align:
+        center;
+
+}
+
+
+.closing-section h2 {
+
+    font-family:
+        var(--heading);
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            75px
+        );
+
+    font-weight:
+        400;
+
+    line-height:
+        1.15;
+
+}
+
+
+.closing-section h2 em {
+
+    color:
+        var(--accent);
+
+    font-style:
+        italic;
+
+}
+
+
+.back-top {
+
+    display:
+        inline-block;
+
+    margin-top:
+        40px;
+
+    color:
+        rgba(
+            255,
+            253,
+            248,
+            0.6
+        );
+
+    text-decoration:
+        none;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+
+/* =========================================================
+   14. MOBILE
+   ========================================================= */
+
+@media (
+    max-width: 900px
+) {
+
+
+    .main-navigation {
+
+        display:
+            none;
+
+    }
+
+
+    .mobile-menu-button {
+
+        display:
+            block;
+
+    }
+
+
+    .story-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .story-image {
+
+        min-height:
+            450px;
+
+    }
+
+
+    .story-content {
+
+        padding:
+            70px 25px;
+
+    }
+
+
+    .why-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+
+    .wellbeing-navigation {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+
+    .identity-navigation {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .identity-button {
+
+        min-height:
+            120px;
+
+    }
+
+
+    .identity-display {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .identity-display-image {
+
+        min-height:
+            350px;
+
+    }
+
+
+    .identity-display-content {
+
+        padding:
+            45px 28px;
+
+    }
+
+}
+
+
+
+@media (
+    max-width: 600px
+) {
+
+
+    .logo-area span {
+
+        display:
+            none;
+
+    }
+
+
+    .logo-area strong {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .hero-content {
+
+        padding:
+            120px 25px 80px;
+
+    }
+
+
+    .hero-location {
+
+        display:
+            none;
+
+    }
+
+
+    .why-section,
+    .wellbeing-section,
+    .identity-section {
+
+        padding:
+            80px 20px;
+
+    }
+
+
+    .why-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .wellbeing-navigation {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .why-card {
+
+        min-height:
+            250px;
+
+    }
+
+
+    .identity-display-image {
+
+        min-height:
+            280px;
+
+    }
+
+
+    .identity-display-content h3 {
+
+        font-size:
+            60px;
+
+    }
+
+}
+/* =========================================================
+   FOUNDERS INFORMATION
+========================================================= */
+
+.founders-info {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 110px 6%;
+
+    display: grid;
+
+    grid-template-columns: 0.55fr 1.45fr;
+
+    gap: 80px;
+
+    border-top: 1px solid rgba(23, 74, 58, 0.12);
+
+}
+
+
+.founders-info-label {
+
+    color: var(--secondary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.founders-info-content {
+
+    max-width: 760px;
+
+}
+
+
+.founders-info-content h2 {
+
+    margin: 18px 0 28px;
+
+    color: var(--primary);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+}
+
+
+.founders-info-content p {
+
+    max-width: 680px;
+
+    margin-bottom: 18px;
+
+    color: #59625b;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   FOUNDERS BUTTON
+========================================================= */
+
+.founders-info-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 20px;
+
+    padding: 15px 24px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.founders-info-button span {
+
+    color: var(--accent);
+
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.founders-info-button:hover {
+
+    background: var(--secondary);
+
+    transform: translateY(-3px);
+
+}
+
+
+.founders-info-button:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .founders-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 85px 7%;
+
+    }
+
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Life at Taktsang Academy — campus spaces, community facilities and the people who make school life meaningful.">
+  <title>Life at Taktsang | Taktsang Academy</title>
+  <link rel="stylesheet" href="life.css">
+</head>
+<body>
+
+  <!-- =========================
+       PAGE HERO
+  ========================== -->
+  <header class="life-hero">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content page-width">
+      <p class="eyebrow">LIFE AT TAKTSANG</p>
+      <h1>More than a <em>classroom.</em></h1>
+      <p class="hero-description">
+        Discover the places, people and everyday experiences that shape life at Taktsang Academy.
+      </p>
+      <a class="hero-button" href="#campus">Discover life at Taktsang <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================
+         THE CAMPUS
+    ========================== -->
+    <section class="campus-section section" id="campus">
+      <div class="page-width">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">THE CAMPUS</p>
+            <h2>Spaces designed for <em>learning, living and belonging.</em></h2>
+          </div>
+          <p class="section-lead">
+            From laboratories and study spaces to boarding, sport and community facilities,
+            the campus is designed to support the whole student.
+          </p>
+        </div>
+
+        <div class="facility-nav" role="tablist" aria-label="Campus facilities">
+          <button class="facility-tab is-active" type="button" data-facility="academic" role="tab" aria-selected="true">
+            Academic Spaces
+          </button>
+          <button class="facility-tab" type="button" data-facility="boarding" role="tab" aria-selected="false">
+            Boarding
+          </button>
+          <button class="facility-tab" type="button" data-facility="sports" role="tab" aria-selected="false">
+            Sports & Recreation
+          </button>
+          <button class="facility-tab" type="button" data-facility="library" role="tab" aria-selected="false">
+            Library
+          </button>
+          <button class="facility-tab" type="button" data-facility="community" role="tab" aria-selected="false">
+            Community Spaces
+          </button>
+        </div>
+
+        <div class="facility-feature" id="facilityFeature" tabindex="0" aria-label="Open facility details">
+          <div class="facility-feature-image" id="facilityFeatureImage"></div>
+          <div class="facility-feature-content">
+            <p class="eyebrow" id="facilityFeatureEyebrow">ACADEMIC SPACES</p>
+            <h3 id="facilityFeatureTitle">Academic Spaces</h3>
+            <p id="facilityFeatureSummary"></p>
+            <div class="feature-meta" id="facilityFeatureMeta"></div>
+            <span class="facility-open-hint">Click to open full details <span aria-hidden="true">↗</span></span>
+          </div>
+        </div>
+
+        <p class="campus-note">
+          <span>Hover</span> a facility for a quick preview. <span>Click</span> to open the complete information without leaving the page.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         COMMUNITY SPACES
+    ========================== -->
+    <section class="community-section section">
+      <div class="page-width">
+        <div class="section-intro compact">
+          <div>
+            <p class="eyebrow">COMMUNITY SPACES</p>
+            <h2>Where school life <em>comes together.</em></h2>
+          </div>
+          <p class="section-lead">
+            Places for movement, reflection, conversation, celebration and the programmes that bring the Taktsang community together.
+          </p>
+        </div>
+
+        <div class="community-grid" id="communityGrid"></div>
+      </div>
+    </section>
+
+    <!-- =========================
+         THE PEOPLE
+    ========================== -->
+    <section class="people-section section" id="people">
+      <div class="page-width">
+        <div class="people-heading">
+          <div>
+            <p class="eyebrow">THE PEOPLE</p>
+            <h2>Spaces provide the setting.<br><em>People give them purpose.</em></h2>
+          </div>
+          <p>
+            Meet the teachers, professionals and support staff who contribute to everyday life at Taktsang.
+          </p>
+        </div>
+
+        <div class="directory-toolbar">
+          <div class="search-box">
+            <label for="staffSearch">Search staff</label>
+            <input id="staffSearch" type="search" placeholder="Name, role or department..." autocomplete="off">
+          </div>
+
+          <div class="filter-box">
+            <label for="categoryFilter">Staff type</label>
+            <select id="categoryFilter">
+              <option value="all">All Staff</option>
+              <option value="teaching">Teaching Staff</option>
+              <option value="non-teaching">Non-Teaching Staff</option>
+              <option value="support">Support Staff</option>
+            </select>
+          </div>
+
+          <div class="filter-box">
+            <label for="departmentFilter">Department</label>
+            <select id="departmentFilter">
+              <option value="all">All Departments</option>
+            </select>
+          </div>
+
+          <button class="clear-button" id="clearFilters" type="button">Clear</button>
+        </div>
+
+        <div class="directory-status">
+          <span id="staffCount">0</span> community members
+        </div>
+
+        <div id="staffDirectory">
+          <!-- Rendered by life.js -->
+        </div>
+
+        <div class="no-results" id="noResults" hidden>
+          <h3>No staff members found.</h3>
+          <p>Try changing the search or filters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+    <section class="final-cta">
+      <div class="page-width">
+        <p class="eyebrow">DISCOVER TAKTSANG</p>
+        <h2>There is more to school<br><em>than the classroom.</em></h2>
+        <p>
+          Explore the wider Taktsang community and discover the spaces and people that make the school what it is.
+        </p>
+        <div class="cta-buttons">
+          <a class="cta-button primary" href="#campus">Explore the campus</a>
+          <a class="cta-button secondary" href="#people">Meet the people</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FACILITY MODAL
+  ========================== -->
+  <div class="modal-shell" id="facilityModal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="facility-modal" role="dialog" aria-modal="true" aria-labelledby="facilityModalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close facility details">×</button>
+
+      <div class="modal-media" id="facilityModalImage"></div>
+
+      <div class="modal-body">
+        <p class="eyebrow" id="facilityModalEyebrow"></p>
+        <h2 id="facilityModalTitle"></h2>
+        <p class="modal-summary" id="facilityModalSummary"></p>
+
+        <div class="modal-divider"></div>
+
+        <div class="modal-columns">
+          <div>
+            <h3>About this space</h3>
+            <p id="facilityModalDescription"></p>
+          </div>
+          <div>
+            <h3>What it supports</h3>
+            <ul id="facilityModalFeatures"></ul>
+          </div>
+        </div>
+
+        <div class="modal-nav">
+          <button type="button" class="modal-nav-button" id="facilityPrev">← Previous</button>
+          <div class="modal-dots" id="facilityDots" aria-label="Facility position"></div>
+          <button type="button" class="modal-nav-button" id="facilityNext">Next →</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- =========================
+       STAFF PROFILE MINI MODAL
+  ========================== -->
+  <div class="modal-shell" id="staffModal" hidden>
+    <div class="modal-backdrop" data-close-staff-modal></div>
+    <section class="staff-modal" role="dialog" aria-modal="true" aria-labelledby="staffModalName">
+      <button class="modal-close" type="button" data-close-staff-modal aria-label="Close staff profile">×</button>
+
+      <div class="staff-modal-photo-wrap">
+        <div class="staff-modal-photo fallback" id="staffModalPhoto">
+          <span id="staffModalInitials">TA</span>
+        </div>
+      </div>
+
+      <div class="staff-modal-content">
+        <p class="eyebrow" id="staffModalCategory"></p>
+        <h2 id="staffModalName"></h2>
+        <p class="staff-modal-role" id="staffModalRole"></p>
+        <p class="staff-modal-department" id="staffModalDepartment"></p>
+
+        <div class="modal-divider"></div>
+
+        <h3>Overview</h3>
+        <p id="staffModalOverview"></p>
+
+        <h3>Responsibilities</h3>
+        <div class="responsibility-list" id="staffModalResponsibilities"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="life.js"></script>
+</body>
+</html>

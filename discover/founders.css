@@ -1,0 +1,1106 @@
+/* =========================================================
+   TAKTSANG ACADEMY
+   FOUNDERS PAGE
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root {
+
+    --primary: #174A3A;
+    --secondary: #5F7650;
+    --accent: #D88924;
+
+    --background: #F7F3E8;
+    --surface: #E9E2D3;
+
+    --text: #202923;
+    --white: #FFFDF8;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(247, 243, 232, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(23, 74, 58, 0.12);
+
+}
+
+
+.nav-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.brand-mark {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.brand-name {
+
+    color: var(--primary);
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+}
+
+
+.back-link {
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.back-link:hover {
+
+    color: var(--accent);
+
+    transform: translateX(-4px);
+
+}
+
+
+/* =========================================================
+   COMMON ELEMENTS
+========================================================= */
+
+.eyebrow {
+
+    display: inline-block;
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.18em;
+
+}
+
+
+.section-label {
+
+    color: var(--secondary);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.founder-hero {
+
+    min-height: 78vh;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    overflow: hidden;
+
+}
+
+
+.hero-content {
+
+    max-width: 700px;
+
+}
+
+
+.hero-content .eyebrow {
+
+    margin-bottom: 24px;
+
+}
+
+
+.hero-content h1 {
+
+    font-size: clamp(52px, 7vw, 92px);
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-content h1 span {
+
+    color: #D88924;
+
+    display: block;
+
+}
+
+
+.hero-content p {
+
+    max-width: 600px;
+
+    font-size: 18px;
+
+    opacity: 0.85;
+
+}
+
+
+.hero-symbol {
+
+    width: 300px;
+
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.hero-symbol::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 50%;
+
+}
+
+
+.hero-symbol span {
+
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    color: var(--accent);
+
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.founder-intro {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 120px 6%;
+
+    display: grid;
+
+    grid-template-columns: 0.5fr 1.5fr;
+
+    gap: 80px;
+
+}
+
+
+.intro-content {
+
+    max-width: 760px;
+
+}
+
+
+.intro-content h2 {
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    color: var(--primary);
+
+    margin-bottom: 35px;
+
+}
+
+
+.intro-content p {
+
+    max-width: 650px;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+
+    color: #4c564f;
+
+}
+
+
+/* =========================================================
+   FOUNDERS SECTION
+========================================================= */
+
+.founders-section {
+
+    padding: 110px 6%;
+
+    background: var(--surface);
+
+}
+
+
+.section-heading {
+
+    max-width: 1200px;
+
+    margin: 0 auto 60px;
+
+}
+
+
+.section-heading h2 {
+
+    margin-top: 15px;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    color: var(--primary);
+
+}
+
+
+.founder-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+}
+
+
+/* =========================================================
+   FOUNDER CARD
+========================================================= */
+
+.founder-card {
+
+    background: var(--white);
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+}
+
+
+.founder-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 45px rgba(23, 74, 58, 0.12);
+
+}
+
+
+.founder-card.featured {
+
+    border-top: 5px solid var(--accent);
+
+}
+
+
+/* =========================================================
+   FOUNDER IMAGE
+========================================================= */
+
+.founder-image {
+
+    height: 390px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--primary);
+
+}
+
+
+.image-placeholder {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+}
+
+
+.image-placeholder span {
+
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    color: rgba(255,255,255,0.75);
+
+}
+
+
+.image-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    color: var(--white);
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================================
+   FOUNDER INFORMATION
+========================================================= */
+
+.founder-info {
+
+    padding: 32px;
+
+}
+
+
+.role {
+
+    color: var(--accent);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.founder-info h3 {
+
+    margin: 10px 0 16px;
+
+    font-size: 32px;
+
+    color: var(--primary);
+
+}
+
+
+.founder-info p {
+
+    color: #59625b;
+
+    font-size: 15px;
+
+    margin-bottom: 24px;
+
+}
+
+
+/* =========================================================
+   DISCOVER BUTTON
+========================================================= */
+
+.read-more {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-weight: bold;
+
+    padding: 0;
+
+}
+
+
+.read-more span {
+
+    color: var(--accent);
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.read-more:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+/* =========================================================
+   SHARED VISION
+========================================================= */
+
+.vision-section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 140px 6%;
+
+    display: grid;
+
+    grid-template-columns: 160px 1fr;
+
+    gap: 70px;
+
+    align-items: start;
+
+}
+
+
+.vision-symbol {
+
+    width: 110px;
+
+    height: 110px;
+
+    border: 1px solid var(--accent);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--accent);
+
+    font-size: 34px;
+
+}
+
+
+.vision-content {
+
+    max-width: 850px;
+
+}
+
+
+.vision-content h2 {
+
+    font-size: clamp(42px, 5vw, 72px);
+
+    color: var(--primary);
+
+    margin: 20px 0 30px;
+
+}
+
+
+.vision-content p {
+
+    font-size: 18px;
+
+    color: #59625b;
+
+    max-width: 700px;
+
+}
+
+
+/* =========================================================
+   WELLBEING MINI NAVIGATION
+========================================================= */
+
+.wellbeing-mini {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.wellbeing-mini span {
+
+    padding: 9px 15px;
+
+    border: 1px solid rgba(23, 74, 58, 0.2);
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    color: var(--primary);
+
+}
+
+
+/* =========================================================
+   PRINCIPAL SECTION
+========================================================= */
+
+.principal-section {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    padding: 100px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+.principal-image {
+
+    max-width: 500px;
+
+}
+
+
+.image-placeholder.large {
+
+    height: 520px;
+
+}
+
+
+.principal-content {
+
+    max-width: 600px;
+
+}
+
+
+.principal-content h2 {
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    margin: 15px 0;
+
+}
+
+
+.principal-role {
+
+    display: block;
+
+    color: var(--accent);
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+
+}
+
+
+.principal-content p {
+
+    color: rgba(255,255,255,0.78);
+
+    margin-bottom: 20px;
+
+}
+
+
+.placeholder-note {
+
+    padding: 20px;
+
+    border-left: 2px solid var(--accent);
+
+    font-size: 14px;
+
+    font-style: italic;
+
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.founder-closing {
+
+    text-align: center;
+
+    padding: 140px 6%;
+
+}
+
+
+.founder-closing h2 {
+
+    max-width: 800px;
+
+    margin: 20px auto 45px;
+
+    color: var(--primary);
+
+    font-size: clamp(42px, 5vw, 70px);
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.discover-button {
+
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    border: 1px solid var(--primary);
+
+    color: var(--primary);
+
+    transition: 0.3s ease;
+
+}
+
+
+.discover-button:hover {
+
+    background: var(--primary);
+
+    color: var(--white);
+
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.founder-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    display: none;
+
+}
+
+
+.founder-modal.active {
+
+    display: block;
+
+}
+
+
+.modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(16, 35, 28, 0.75);
+
+    backdrop-filter: blur(6px);
+
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+
+    margin: 10vh auto;
+
+    padding: 55px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+}
+
+
+.modal-content h2 {
+
+    color: var(--primary);
+
+    font-size: 50px;
+
+    margin: 15px 0 25px;
+
+}
+
+
+.modal-content p {
+
+    color: #59625b;
+
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 22px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    color: var(--primary);
+
+}
+
+
+.modal-note {
+
+    margin-top: 30px;
+
+    padding: 18px;
+
+    background: var(--surface);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .founder-hero {
+
+        min-height: auto;
+
+        padding: 80px 7%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .hero-symbol {
+
+        width: 180px;
+
+        height: 180px;
+
+        align-self: center;
+
+    }
+
+
+    .hero-symbol span {
+
+        font-size: 45px;
+
+    }
+
+
+    .founder-intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 80px 7%;
+
+    }
+
+
+    .founder-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 550px;
+
+    }
+
+
+    .vision-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 90px 7%;
+
+    }
+
+
+    .principal-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 80px 7%;
+
+    }
+
+
+    .principal-image {
+
+        max-width: 100%;
+
+    }
+
+
+    .image-placeholder.large {
+
+        height: 400px;
+
+    }
+
+
+    .modal-content {
+
+        margin: 5vh 6%;
+
+        padding: 40px 25px;
+
+    }
+
+
+    .modal-content h2 {
+
+        font-size: 38px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .brand-name {
+
+        font-size: 15px;
+
+    }
+
+
+    .back-link {
+
+        font-size: 12px;
+
+    }
+
+
+    .founder-image {
+
+        height: 330px;
+
+    }
+
+
+    .founder-info {
+
+        padding: 25px;
+
+    }
+
+}
