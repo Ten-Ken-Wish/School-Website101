@@ -1,0 +1,555 @@
+/* =========================================================
+   TAKTSANG ACADEMY
+   NEW FOOTER
+========================================================= */
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ta-footer {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 80px;
+
+    background: #174a3a;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.ta-footer-main {
+
+    width: min(1200px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding: 65px 0 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1.4fr
+        1.2fr;
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.ta-footer-brand {
+    max-width: 390px;
+}
+
+
+.ta-footer-logo {
+
+    width: 58px !important;
+    height: 58px !important;
+
+    max-width: 58px !important;
+    max-height: 58px !important;
+
+    min-width: 58px !important;
+    min-height: 58px !important;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.7);
+
+    margin-bottom: 18px;
+}
+
+
+.ta-footer-brand h3 {
+
+    margin: 0 0 13px;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    letter-spacing: 0.3px;
+}
+
+
+.ta-footer-brand p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13.5px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.ta-footer-links h4,
+.ta-footer-contact h4,
+.ta-footer-social h4 {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0 0 22px;
+
+    padding-bottom: 8px;
+
+    color: #f28c28;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* Small orange line underneath heading */
+
+.ta-footer-links h4::after,
+.ta-footer-contact h4::after,
+.ta-footer-social h4::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 28px;
+
+    height: 2px;
+
+    background: #f28c28;
+
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.ta-footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.ta-footer-links a {
+
+    position: relative;
+
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13.5px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ta-footer-links a:hover {
+
+    color: #ffffff;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.ta-footer-contact p {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 0 0 13px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13.5px;
+
+    line-height: 1.6;
+}
+
+
+.ta-footer-contact p span {
+
+    flex-shrink: 0;
+
+    width: 18px;
+
+    color: #f28c28;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.ta-footer-social {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   SOCIAL ICON CONTAINER
+========================================================= */
+
+.ta-social-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   SOCIAL ICON BUTTON
+========================================================= */
+
+.ta-social-icons a {
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   SOCIAL ICON IMAGE
+========================================================= */
+
+.ta-social-icons a img {
+
+    width: 17px !important;
+    height: 17px !important;
+
+    max-width: 17px !important;
+    max-height: 17px !important;
+
+    min-width: 17px !important;
+    min-height: 17px !important;
+
+    display: block !important;
+
+    object-fit: contain;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* =========================================================
+   SOCIAL HOVER
+========================================================= */
+
+.ta-social-icons a:hover {
+
+    transform: translateY(-4px);
+
+    background: rgba(242, 140, 40, 0.18);
+
+    border-color: rgba(242, 140, 40, 0.6);
+}
+
+
+.ta-social-icons a:hover img {
+
+    transform: scale(1.15);
+}
+
+
+.ta-social-text {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.ta-footer-bottom {
+
+    width: min(1200px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding: 18px 0 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.ta-footer-bottom p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 11.5px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .ta-footer-main {
+
+        grid-template-columns:
+            1.5fr
+            1fr
+            1.3fr;
+
+        gap: 40px;
+    }
+
+    .ta-footer-social {
+
+        grid-column: 2 / 4;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .ta-footer-main {
+
+        width: min(100% - 50px, 550px);
+
+        padding: 50px 0 40px;
+
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+
+        text-align: center;
+    }
+
+
+    .ta-footer-brand {
+
+        max-width: 500px;
+
+        margin: 0 auto;
+    }
+
+
+    .ta-footer-logo {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .ta-footer-links,
+    .ta-footer-contact,
+    .ta-footer-social {
+
+        align-items: center;
+
+        grid-column: auto;
+    }
+
+
+    .ta-footer-links h4::after,
+    .ta-footer-contact h4::after,
+    .ta-footer-social h4::after {
+
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+
+    .ta-footer-links a:hover {
+
+        transform: translateY(-2px);
+    }
+
+
+    .ta-footer-contact p {
+
+        justify-content: center;
+
+        text-align: left;
+    }
+
+
+    .ta-social-icons {
+
+        justify-content: center;
+    }
+
+
+    .ta-footer-bottom {
+
+        width: min(100% - 40px, 550px);
+
+        padding: 18px 0 22px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 5px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .ta-footer-main {
+
+        width: calc(100% - 35px);
+
+        padding-top: 42px;
+    }
+
+
+    .ta-footer-brand p {
+
+        font-size: 13px;
+    }
+
+
+    .ta-social-icons {
+
+        gap: 10px;
+    }
+
+
+    .ta-social-icons a {
+
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .ta-social-icons a img {
+
+        width: 16px !important;
+        height: 16px !important;
+
+        max-width: 16px !important;
+        max-height: 16px !important;
+
+        min-width: 16px !important;
+        min-height: 16px !important;
+    }
+}
+

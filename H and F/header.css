@@ -1,0 +1,243 @@
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+
+    border-bottom: 1px solid #174a3a;
+    background-color: #174a3a;
+    color: #E5E7E5;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================
+   LOGO + SCHOOL NAME
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    width: 70px;
+    height: 70px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    display: block;
+}
+
+.home-logo {
+    text-decoration: none;
+    color: inherit;
+}
+
+.school-name h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.school-name p {
+    margin-top: 2px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.Features {
+    display: flex;
+    align-items: center;
+}
+
+.Features nav {
+    text-align: right;
+}
+
+.Features a {
+    display: inline-block;
+
+    color: #E5E7E5;
+    text-decoration: none;
+
+    font-size: 13px;
+    margin-left: 15px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================
+   NAVIGATION HOVER
+========================= */
+
+.Features a:hover {
+    transform: scale(1.1);
+    color: #f28c28;
+}
+
+
+/* =========================
+   HEADER CIRCLES
+========================= */
+
+header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    top: -250px;
+    right: 60px;
+
+    pointer-events: none;
+
+    animation:
+        headerCircleLarge 1.2s ease-out forwards;
+}
+
+
+/* =========================
+   SMALL ORANGE CIRCLE
+========================= */
+
+header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border: 2px solid rgba(216, 137, 36, 0.35);
+    border-radius: 50%;
+
+    top: -130px;
+    right: 280px;
+
+    pointer-events: none;
+
+    animation:
+        headerCircleSmall 1s ease-out 0.2s forwards;
+
+    opacity: 0;
+}
+
+
+/* =========================
+   LARGE CIRCLE ANIMATION
+========================= */
+
+@keyframes headerCircleLarge {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.65) translate(80px, -40px);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+
+/* =========================
+   SMALL CIRCLE ANIMATION
+========================= */
+
+@keyframes headerCircleSmall {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translate(60px, -30px);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+
+/* =========================
+   MOBILE HEADER
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 12px 20px;
+    }
+
+    .logo-image {
+        width: 55px;
+        height: 55px;
+    }
+
+    .school-name h2 {
+        font-size: 18px;
+    }
+
+    .school-name p {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .Features a {
+        font-size: 11px;
+        margin-left: 8px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .Features nav {
+        text-align: center;
+    }
+
+    .Features a {
+        font-size: 11px;
+        margin: 4px 6px;
+    }
+}

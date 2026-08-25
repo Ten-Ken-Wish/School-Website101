@@ -31,20 +31,8 @@ const founderData = {
         description:
             "Sonam Dorji is one of the founding members behind the establishment of Taktsang Academy."
 
-    },
-
-
-    thinley: {
-
-        name: "Thinley Lhendup Dorji",
-
-        role: "FOUNDER",
-
-        description:
-            "Thinley Lhendup Dorji is one of the founding members behind the establishment of Taktsang Academy."
-
     }
-
+    
 };
 
 
