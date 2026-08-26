@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const featureTitle = document.getElementById("facilityFeatureTitle");
   const featureSummary = document.getElementById("facilityFeatureSummary");
   const featureMeta = document.getElementById("facilityFeatureMeta");
-
   const facilityModal = document.getElementById("facilityModal");
   const facilityModalImage = document.getElementById("facilityModalImage");
+  const facilityGalleryThumbs =
+  document.getElementById("facilityGalleryThumbs");
+  let activeGalleryIndex = 0;
   const facilityModalEyebrow = document.getElementById("facilityModalEyebrow");
   const facilityModalTitle = document.getElementById("facilityModalTitle");
   const facilityModalSummary = document.getElementById("facilityModalSummary");
@@ -76,24 +78,77 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderFacilityModal(index) {
-    activeFacilityIndex = index;
-    const item = DATA.facilities[index];
+  activeFacilityIndex = index;
+  activeGalleryIndex = 0;
 
-    facilityModalEyebrow.textContent = item.eyebrow;
-    facilityModalTitle.textContent = item.title;
-    facilityModalSummary.textContent = item.summary;
-    facilityModalDescription.textContent = item.description;
+  const item = DATA.facilities[index];
 
-    facilityModalFeatures.innerHTML = "";
-    item.features.forEach(featureText => {
-      const li = document.createElement("li");
-      li.textContent = featureText;
-      facilityModalFeatures.appendChild(li);
+  facilityModalEyebrow.textContent = item.eyebrow;
+  facilityModalTitle.textContent = item.title;
+  facilityModalSummary.textContent = item.summary;
+  facilityModalDescription.textContent = item.description;
+
+  facilityModalFeatures.innerHTML = "";
+
+  item.features.forEach(featureText => {
+    const li = document.createElement("li");
+    li.textContent = featureText;
+    facilityModalFeatures.appendChild(li);
+  });
+
+  renderFacilityGallery(item);
+  renderFacilityDots();
+}
+function renderFacilityGallery(item) {
+
+  const gallery = item.gallery && item.gallery.length
+    ? item.gallery
+    : [item.image];
+
+  facilityGalleryThumbs.innerHTML = "";
+
+  function showGalleryImage(index) {
+
+    activeGalleryIndex = index;
+
+    const image = gallery[index];
+
+    setBackground(facilityModalImage, image);
+
+    const thumbnails =
+      facilityGalleryThumbs.querySelectorAll(".gallery-thumb");
+
+    thumbnails.forEach((thumb, i) => {
+      thumb.classList.toggle(
+        "is-active",
+        i === index
+      );
+    });
+  }
+
+  gallery.forEach((image, index) => {
+
+    const thumb = document.createElement("button");
+
+    thumb.type = "button";
+    thumb.className = "gallery-thumb";
+    thumb.setAttribute(
+      "aria-label",
+      `Show photo ${index + 1} of ${gallery.length}`
+    );
+
+    thumb.style.backgroundImage =
+      `url("${image}")`;
+
+    thumb.addEventListener("click", () => {
+      showGalleryImage(index);
     });
 
-    setBackground(facilityModalImage, item.image);
-    renderFacilityDots();
-  }
+    facilityGalleryThumbs.appendChild(thumb);
+  });
+
+  showGalleryImage(0);
+}
 
   function renderFacilityDots() {
     facilityDots.innerHTML = "";
@@ -192,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Science",
     "Mathematics",
     "Languages",
-    "ICT & Technology"
+    "Humanities"
   ];
 
   const categoryLabels = {
@@ -312,7 +367,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return card;
   }
 
-  function createDepartmentBlock(department, people) {
+function createDepartmentBlock(department, people, category) {
     const block = document.createElement("section");
     block.className = "department-block";
 
@@ -323,7 +378,17 @@ document.addEventListener("DOMContentLoaded", () => {
     title.textContent = department;
 
     const count = document.createElement("span");
-    count.textContent = `${people.length} ${people.length === 1 ? "member" : "members"}`;
+
+    const teachingCount =
+  people.filter(person => person.category === "teaching").length;
+
+if (category === "teaching") {
+  count.textContent =
+    `${teachingCount} ${teachingCount === 1 ? "teacher" : "teachers"}`;
+} else {
+  count.textContent =
+    `${people.length} ${people.length === 1 ? "member" : "members"}`;
+}
 
     heading.append(title, count);
 
@@ -367,9 +432,15 @@ document.addEventListener("DOMContentLoaded", () => {
       groups[person.department].push(person);
     });
 
-    sortDepartments(Object.keys(groups), category).forEach(department => {
-      section.appendChild(createDepartmentBlock(department, groups[department]));
-    });
+   sortDepartments(Object.keys(groups), category).forEach(department => {
+  section.appendChild(
+    createDepartmentBlock(
+      department,
+      groups[department],
+      category
+    )
+  );
+});
 
     staffDirectory.appendChild(section);
   }

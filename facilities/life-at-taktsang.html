@@ -45,22 +45,62 @@
         </div>
 
         <div class="facility-nav" role="tablist" aria-label="Campus facilities">
-          <button class="facility-tab is-active" type="button" data-facility="academic" role="tab" aria-selected="true">
-            Academic Spaces
-          </button>
-          <button class="facility-tab" type="button" data-facility="boarding" role="tab" aria-selected="false">
-            Boarding
-          </button>
-          <button class="facility-tab" type="button" data-facility="sports" role="tab" aria-selected="false">
-            Sports & Recreation
-          </button>
-          <button class="facility-tab" type="button" data-facility="library" role="tab" aria-selected="false">
-            Library
-          </button>
-          <button class="facility-tab" type="button" data-facility="community" role="tab" aria-selected="false">
-            Community Spaces
-          </button>
-        </div>
+
+  <button
+    class="facility-tab is-active"
+    type="button"
+    data-facility="academic"
+    role="tab"
+    aria-selected="true">
+    Academic Spaces
+  </button>
+
+  <button
+    class="facility-tab"
+    type="button"
+    data-facility="boarding"
+    role="tab"
+    aria-selected="false">
+    Boarding
+  </button>
+
+  <button
+    class="facility-tab"
+    type="button"
+    data-facility="sports"
+    role="tab"
+    aria-selected="false">
+    Sports & Recreation
+  </button>
+
+  <button
+    class="facility-tab"
+    type="button"
+    data-facility="library"
+    role="tab"
+    aria-selected="false">
+    Library
+  </button>
+
+  <button
+    class="facility-tab"
+    type="button"
+    data-facility="dining"
+    role="tab"
+    aria-selected="false">
+    Dining Area
+  </button>
+
+  <button
+    class="facility-tab"
+    type="button"
+    data-facility="community"
+    role="tab"
+    aria-selected="false">
+    Community Spaces
+  </button>
+
+</div>
 
         <div class="facility-feature" id="facilityFeature" tabindex="0" aria-label="Open facility details">
           <div class="facility-feature-image" id="facilityFeatureImage"></div>
@@ -180,7 +220,21 @@
     <section class="facility-modal" role="dialog" aria-modal="true" aria-labelledby="facilityModalTitle">
       <button class="modal-close" type="button" data-close-modal aria-label="Close facility details">×</button>
 
-      <div class="modal-media" id="facilityModalImage"></div>
+      <div class="modal-media-gallery">
+
+  <div
+    class="modal-media"
+    id="facilityModalImage"
+    aria-label="Facility image">
+  </div>
+
+  <div
+    class="facility-gallery-thumbs"
+    id="facilityGalleryThumbs"
+    aria-label="Facility photos">
+  </div>
+
+</div>
 
       <div class="modal-body">
         <p class="eyebrow" id="facilityModalEyebrow"></p>
