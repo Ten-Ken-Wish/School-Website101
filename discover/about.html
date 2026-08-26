@@ -5,8 +5,7 @@
 
     <!-- =====================================================
          TAKTSANG ACADEMY
-         ABOUT / DISCOVER PAGE
-         HTML FILE
+         DISCOVER PAGE
          ===================================================== -->
 
     <meta charset="UTF-8">
@@ -25,7 +24,10 @@
         content="Discover Taktsang Academy, a wellbeing-focused school in Lamgong, Paro, Bhutan."
     >
 
-    <!-- Google Fonts -->
+    <!-- =====================================================
+         GOOGLE FONTS
+    ===================================================== -->
+
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -42,10 +44,34 @@
         rel="stylesheet"
     >
 
-    <!-- Our CSS -->
+
+    <!-- =====================================================
+         UNIVERSAL HEADER
+    ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="header.css"
+    >
+
+
+    <!-- =====================================================
+         DISCOVERY PAGE CSS
+    ===================================================== -->
+
     <link
         rel="stylesheet"
         href="about.css"
+    >
+
+
+    <!-- =====================================================
+         UNIVERSAL FOOTER
+    ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="footer.css"
     >
 
 </head>
@@ -55,119 +81,126 @@
 
 
 <!-- =========================================================
-     NAVIGATION
-     ========================================================= -->
+     UNIVERSAL HEADER
+========================================================= -->
 
-<header class="site-header">
+<header>
+
+    <!-- School Logo / Name -->
 
     <a
-        href="about.html"
-        class="logo-area"
+        href="../homepage/homepage.html"
+        class="home-logo"
     >
 
-        <img
-            src="images/taktsang-logo.png"
-            alt="Taktsang Academy logo"
-        >
+        <div class="logo">
 
-        <div>
+            <img
+                class="logo-image"
+                src="../homepage/Images/proper.jpeg"
+                alt="Taktsang Academy Logo"
+            >
 
-            <strong>
-                Taktsang Academy
-            </strong>
+            <div class="school-name">
 
-            <span>
-                Wellbeing • Wisdom • Growth
-            </span>
+                <h2>
+                    Taktsang Academy
+                </h2>
+
+                <p>
+                    PARO · BHUTAN
+                </p>
+
+            </div>
 
         </div>
 
     </a>
 
 
-    <nav class="main-navigation">
+    <!-- Navigation -->
 
-        <a href="#story">
-            Our Story
-        </a>
+    <div class="Features">
 
-        <a href="#why-taktsang">
-            Why Taktsang
-        </a>
+        <nav>
 
-        <a href="#wellbeing">
-            Wellbeing
-        </a>
+            <a href="About.html">
+                About Academy
+            </a>
 
-        <a href="#identity">
-            Our Identity
-        </a>
+            <a href="../homepage/homepage.html#wellbeing">
+                5 Wellbeing Areas
+            </a>
 
-    </nav>
+            <a href="Academics.html">
+                Academics
+            </a>
 
+            <a href="Calendar.html">
+                Calendar
+            </a>
 
-    <button
-        class="mobile-menu-button"
-        id="mobileMenuButton"
-        type="button"
-        aria-label="Open navigation"
-    >
-        ☰
-    </button>
+            <a href="Gallery.html">
+                Gallery
+            </a>
+
+            <a href="Faculty-&-Staff.html">
+                Faculty & Staff
+            </a>
+
+            <br>
+
+            <a href="About-Principle">
+                About Founder
+            </a>
+
+            <a href="Question-Bank.html">
+                Question Bank
+            </a>
+
+            <a href="School-Life.html">
+                School Life
+            </a>
+
+            <a href="Announcements.html">
+                Announcements
+            </a>
+
+            <a href="Contact.html">
+                Contact Us
+            </a>
+
+            <a href="Media.html">
+                Media
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
 
 <!-- =========================================================
-     MOBILE NAVIGATION
-     ========================================================= -->
-
-<div
-    class="mobile-navigation"
-    id="mobileNavigation"
->
-
-    <a href="#story">
-        Our Story
-    </a>
-
-    <a href="#why-taktsang">
-        Why Taktsang
-    </a>
-
-    <a href="#wellbeing">
-        Wellbeing
-    </a>
-
-    <a href="#identity">
-        Our Identity
-    </a>
-
-</div>
-
-
+     MAIN DISCOVERY CONTENT
+========================================================= -->
 
 <main>
 
 
 <!-- =========================================================
-     SECTION 01
-     HERO
-     ========================================================= -->
+     HERO MEDIA
+========================================================= -->
 
-<section class="hero-section">
+<div class="hero-media">
 
+    <img
+        src="image/hero-school.jpg"
+        alt="Taktsang Academy campus"
+    >
 
-    <div class="hero-image">
-
-        <img
-            src="images/hero-school.jpg"
-            alt="Taktsang Academy"
-        >
-
-    </div>
-
+</div>
 
     <div class="hero-overlay"></div>
 
@@ -229,7 +262,7 @@
 <!-- =========================================================
      SECTION 02
      OUR STORY
-     ========================================================= -->
+========================================================= -->
 
 <section
     class="story-section"
@@ -326,7 +359,7 @@
 <!-- =========================================================
      SECTION 03
      WHY TAKTSANG?
-     ========================================================= -->
+========================================================= -->
 
 <section
     class="why-section"
@@ -368,8 +401,6 @@
     <div class="why-grid">
 
 
-        <!-- CARD 01 -->
-
         <article class="why-card">
 
             <span class="why-number">
@@ -395,8 +426,6 @@
         </article>
 
 
-
-        <!-- CARD 02 -->
 
         <article class="why-card featured">
 
@@ -424,8 +453,6 @@
 
 
 
-        <!-- CARD 03 -->
-
         <article class="why-card">
 
             <span class="why-number">
@@ -451,8 +478,6 @@
         </article>
 
 
-
-        <!-- CARD 04 -->
 
         <article class="why-card">
 
@@ -486,49 +511,75 @@
 
 
 <!-- =====================================================
-     FIVE AREAS OF WELLBEING — INTRODUCTION
+     FIVE AREAS OF WELLBEING
 ====================================================== -->
 
 <section class="wellbeing-intro">
 
     <div class="wellbeing-intro-label">
+
         OUR APPROACH
+
     </div>
+
 
     <div class="wellbeing-intro-content">
 
         <span class="eyebrow">
+
             FIVE AREAS OF WELLBEING
+
         </span>
 
+
         <h2>
+
             Education that looks
             beyond the classroom.
+
         </h2>
 
+
         <p>
+
             At Taktsang Academy, wellbeing is understood through
             five interconnected areas: Academic, Physical, Social,
             Spiritual and Emotional.
+
         </p>
+
 
         <p>
+
             Explore each area to discover how this philosophy can
             shape the development of the whole student.
+
         </p>
 
-        <a href="wellbeing.html" class="wellbeing-button">
+
+        <a
+            href="wellbeing.html"
+            class="wellbeing-button"
+        >
+
             Explore the Five Areas
-            <span>→</span>
+
+            <span>
+                →
+            </span>
+
         </a>
 
     </div>
 
 </section>
+
+
+
 <!-- =========================================================
      SECTION 05
      TAKTSANG IDENTITY
-     ========================================================= -->
+========================================================= -->
 
 <section
     class="identity-section"
@@ -567,9 +618,7 @@
 
 
 
-    <!-- =====================================================
-         IDENTITY NAVIGATION
-         ===================================================== -->
+    <!-- IDENTITY NAVIGATION -->
 
     <div class="identity-navigation">
 
@@ -643,9 +692,7 @@
 
 
 
-    <!-- =====================================================
-         IDENTITY DISPLAY
-         ===================================================== -->
+    <!-- IDENTITY DISPLAY -->
 
     <div class="identity-display">
 
@@ -717,11 +764,15 @@
 
 
 </section>
+
+
+
 <!-- =====================================================
      FOUNDERS INFORMATION
 ====================================================== -->
 
 <section class="founders-info">
+
 
     <div class="founders-info-label">
 
@@ -738,26 +789,44 @@
             OUR FOUNDERS
         </span>
 
+
         <h2>
+
             The people behind
             the vision.
+
         </h2>
 
-        <p>
-            Taktsang Academy was founded by Namgay Phentsho,
-            and Sonam Dorji.
-        </p>
 
         <p>
+
+            Taktsang Academy was founded by Namgay Phentsho,
+            and Sonam Dorji.
+
+        </p>
+
+
+        <p>
+
             Together, the founders established the school with
             a vision of creating an educational environment where
             students can develop academically, physically, socially,
             spiritually and emotionally.
+
         </p>
 
-        <a href="founders.html" class="founders-info-button">
+
+        <a
+            href="founders.html"
+            class="founders-info-button"
+        >
+
             Learn About Our Founders
-            <span>→</span>
+
+            <span>
+                →
+            </span>
+
         </a>
 
     </div>
@@ -769,13 +838,15 @@
 <!-- =========================================================
      SECTION 06
      CLOSING VISION
-     ========================================================= -->
+========================================================= -->
 
 <section class="closing-section">
 
 
     <p class="section-label">
+
         THE TAKTSANG VISION
+
     </p>
 
 
@@ -793,22 +864,244 @@
 
 
     <a
-        href="#top"
+        href="#"
         class="back-top"
     >
+
         Back to top ↑
+
     </a>
 
 </section>
+
+
 </main>
 
 
 
 <!-- =========================================================
-     JAVASCRIPT
-     ========================================================= -->
+     UNIVERSAL FOOTER
+========================================================= -->
+
+<footer class="ta-footer">
+
+    <div class="ta-footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="ta-footer-brand">
+
+            <img
+                src="images/Logo.jpeg"
+                alt="Taktsang Academy Logo"
+                class="ta-footer-logo"
+            >
+
+            <h3>
+                Taktsang Academy
+            </h3>
+
+            <p>
+
+                A different kind of education in Paro, Bhutan —
+                where learning goes beyond academics and inspires
+                confidence, mindfulness and progress.
+
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <nav
+            class="ta-footer-links"
+            aria-label="Footer navigation"
+        >
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="../homepage/index.html">
+                Home
+            </a>
+
+            <a href="../academic/academic.html">
+                Academic
+            </a>
+
+            <a href="../physical/physical.html">
+                Physical
+            </a>
+
+            <a href="../emotional/emotional.html">
+                Emotional
+            </a>
+
+            <a href="../spiritual/spiritual.html">
+                Spiritual
+            </a>
+
+            <a href="../social/social.html">
+                Social
+            </a>
+
+        </nav>
+
+
+        <!-- CONTACT -->
+
+        <div class="ta-footer-contact">
+
+            <h4>
+                Contact Us
+            </h4>
+
+            <p>
+                <span>📍</span>
+                Paro, Satsam, Bhutan
+            </p>
+
+            <p>
+                <span>📞</span>
+                +975 77 996 622
+            </p>
+
+            <p>
+                <span>✉</span>
+                tagtsangacademy@education.gov.bt
+            </p>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+
+        <div class="ta-footer-social">
+
+            <h4>
+                Follow Us
+            </h4>
+
+
+            <div class="ta-social-icons">
+
+
+                <!-- Facebook -->
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=61582289345909"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+
+                    <img
+                        src=""
+                        alt="Facebook"
+                    >
+
+                </a>
+
+
+                <!-- Instagram -->
+
+                <a
+                    href="https://www.instagram.com/naamtshook/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+
+                    <img
+                        src="images/insta.webp"
+                        alt="Instagram"
+                    >
+
+                </a>
+
+
+                <!-- YouTube -->
+
+                <a
+                    href="YOUR YOUTUBE LINK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                >
+
+                    <img
+                        src="images/youtube-logo-png-46031.png"
+                        alt="YouTube"
+                    >
+
+                </a>
+
+
+                <!-- TikTok -->
+
+                <a
+                    href="https://www.tiktok.com/@tagtsangacademywellbeing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                >
+
+                    <img
+                        src="images/vecteezy_tiktok-png-icon_16716450.png"
+                        alt="TikTok"
+                    >
+
+                </a>
+
+
+            </div>
+
+
+            <p class="ta-social-text">
+
+                Stay connected with Taktsang Academy.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="ta-footer-bottom">
+
+        <p>
+
+            © 2026 Taktsang Academy.
+            All Rights Reserved.
+
+        </p>
+
+
+        <p>
+
+            Designed & Developed by the
+            Taktsang Academy Web Team
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     DISCOVERY JAVASCRIPT
+========================================================= -->
 
 <script src="about.js"></script>
+
 
 </body>
 
