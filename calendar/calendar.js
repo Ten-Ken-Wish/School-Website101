@@ -7,469 +7,21 @@
 
 /* =========================================================
    SECTION 01
-   DEMO EVENT DATABASE
+   SCHOOL EVENT DATABASE
 
    IMPORTANT:
 
-   These events are currently stored inside JavaScript.
+   The calendar currently contains NO published events.
 
-   In the FINAL website, this section can be replaced
-   by a database/API controlled by the school administrator.
+   Official school calendar information will be added later
+   through the centralized Admin Panel.
+
+   The data structure is intentionally preserved so that
+   the future Admin Panel/database can provide the same
+   type of records without redesigning the calendar.
 ========================================================= */
 
-const schoolEvents = [
-
-
-    /* =====================================================
-       TAKTSANG SCHOOL EVENTS
-    ====================================================== */
-
-    {
-        id: 1,
-
-        date: "2026-09-03",
-
-        title: "Academic Orientation",
-
-        category: "academic",
-
-        time: "9:00 AM – 12:00 PM",
-
-        location: "Taktsang Academy",
-
-        description:
-            "An orientation session introducing students to the academic year and learning expectations."
-    },
-
-
-    {
-        id: 2,
-
-        date: "2026-09-08",
-
-        title: "Wellbeing Session",
-
-        category: "wellbeing",
-
-        time: "2:00 PM – 4:00 PM",
-
-        location: "School Campus",
-
-        description:
-            "A student wellbeing session focused on building healthy habits and a supportive school community."
-    },
-
-
-    {
-        id: 3,
-
-        date: "2026-09-11",
-
-        title: "School Community Day",
-
-        category: "cultural",
-
-        time: "9:00 AM – 3:00 PM",
-
-        location: "Taktsang Academy",
-
-        description:
-            "A community gathering celebrating learning, culture and collaboration within the school."
-    },
-
-
-    {
-        id: 4,
-
-        date: "2026-09-16",
-
-        title: "Sports Activity",
-
-        category: "sports",
-
-        time: "3:00 PM – 5:00 PM",
-
-        location: "School Grounds",
-
-        description:
-            "A school sports activity encouraging teamwork, movement and physical wellbeing."
-    },
-
-
-    {
-        id: 5,
-
-        date: "2026-09-22",
-
-        title: "Academic Assessment",
-
-        category: "academic",
-
-        time: "9:00 AM – 12:00 PM",
-
-        location: "Classrooms",
-
-        description:
-            "Scheduled academic assessment for students."
-    },
-
-
-    {
-        id: 6,
-
-        date: "2026-09-28",
-
-        title: "School Holiday",
-
-        category: "holiday",
-
-        time: "All Day",
-
-        location: "—",
-
-        description:
-            "School holiday."
-    },
-
-
-
-    /* =====================================================
-       BHUTAN PUBLIC / NATIONAL HOLIDAYS — 2026
-
-       IMPORTANT:
-
-       These are DEMO calendar entries.
-
-       Verify the official dates against the applicable
-       Bhutan government notification before publishing.
-    ====================================================== */
-
-
-    {
-        id: 101,
-
-        date: "2026-01-02",
-
-        title: "Winter Solstice (Nyilo)",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Bhutanese public holiday observed across the country."
-    },
-
-
-    {
-        id: 102,
-
-        date: "2026-01-19",
-
-        title: "Traditional Day of Offerings",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Traditional Day of Offerings observed as a public holiday in Bhutan."
-    },
-
-
-    {
-        id: 103,
-
-        date: "2026-02-18",
-
-        title: "Losar",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Losar, the Bhutanese New Year."
-    },
-
-
-    {
-        id: 104,
-
-        date: "2026-02-19",
-
-        title: "Losar Holiday",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday associated with the Losar period."
-    },
-
-
-    {
-        id: 105,
-
-        date: "2026-02-21",
-
-        title: "Birth Anniversary of His Majesty the King",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday marking the Birth Anniversary of His Majesty the King."
-    },
-
-
-    {
-        id: 106,
-
-        date: "2026-02-22",
-
-        title: "King's Birthday Holiday",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday associated with the King's Birthday celebration."
-    },
-
-
-    {
-        id: 107,
-
-        date: "2026-02-23",
-
-        title: "King's Birthday Holiday",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday associated with the King's Birthday celebration."
-    },
-
-
-    {
-        id: 108,
-
-        date: "2026-04-26",
-
-        title: "Zhabdrung Kuchoe",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Commemoration of Zhabdrung Ngawang Namgyal."
-    },
-
-
-    {
-        id: 109,
-
-        date: "2026-05-02",
-
-        title: "Birth Anniversary of the Third Druk Gyalpo",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday commemorating the Birth Anniversary of the Third Druk Gyalpo."
-    },
-
-
-    {
-        id: 110,
-
-        date: "2026-05-31",
-
-        title: "Buddha's Parinirvana",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday commemorating Buddha's Parinirvana."
-    },
-
-
-    {
-        id: 111,
-
-        date: "2026-06-24",
-
-        title: "Birth Anniversary of Guru Rinpoche",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday commemorating the Birth Anniversary of Guru Rinpoche."
-    },
-
-
-    {
-        id: 112,
-
-        date: "2026-07-18",
-
-        title: "First Sermon of Lord Buddha",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday commemorating the First Sermon of Lord Buddha."
-    },
-
-
-    {
-        id: 113,
-
-        date: "2026-09-23",
-
-        title: "Blessed Rainy Day",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Blessed Rainy Day, observed as a public holiday in Bhutan."
-    },
-
-
-    {
-        id: 114,
-
-        date: "2026-10-21",
-
-        title: "Dashain",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday observed for Dashain."
-    },
-
-
-    {
-        id: 115,
-
-        date: "2026-11-01",
-
-        title: "Coronation Anniversary of His Majesty the King",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday marking the Coronation Anniversary of His Majesty the King."
-    },
-
-
-    {
-        id: 116,
-
-        date: "2026-11-01",
-
-        title: "Descending Day of Lord Buddha",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday commemorating the Descending Day of Lord Buddha."
-    },
-
-
-    {
-        id: 117,
-
-        date: "2026-11-11",
-
-        title: "Birth Anniversary of the Fourth Druk Gyalpo",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Public holiday commemorating the Birth Anniversary of the Fourth Druk Gyalpo."
-    },
-
-
-    {
-        id: 118,
-
-        date: "2026-12-17",
-
-        title: "National Day of Bhutan",
-
-        category: "bhutan-holiday",
-
-        time: "All Day",
-
-        location: "Bhutan",
-
-        description:
-            "Bhutan's National Day, observed annually on 17 December."
-    }
-
-];
-
+const schoolEvents = [];
 
 
 /* =========================================================
@@ -478,7 +30,6 @@ const schoolEvents = [
 ========================================================= */
 
 let currentDate = new Date();
-
 
 
 /* =========================================================
@@ -528,7 +79,6 @@ const eventFilter =
     );
 
 
-
 /* =========================================================
    SECTION 04
    MONTH NAMES
@@ -561,7 +111,6 @@ const monthNames = [
     "December"
 
 ];
-
 
 
 /* =========================================================
@@ -626,7 +175,6 @@ function renderCalendar() {
         ).getDate();
 
 
-
     /* =====================================================
        EMPTY DAYS
     ====================================================== */
@@ -654,7 +202,6 @@ function renderCalendar() {
     }
 
 
-
     /* =====================================================
        CREATE EACH DAY
     ====================================================== */
@@ -676,12 +223,10 @@ function renderCalendar() {
             "calendar-day";
 
 
-
         /* CREATE DATE STRING */
 
         const dateString =
             `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-
 
 
         /* =================================================
@@ -709,7 +254,6 @@ function renderCalendar() {
         }
 
 
-
         /* =================================================
            DAY NUMBER
         ================================================= */
@@ -733,7 +277,6 @@ function renderCalendar() {
         );
 
 
-
         /* =================================================
            GET EVENTS
         ================================================= */
@@ -755,7 +298,6 @@ function renderCalendar() {
         }
 
 
-
         /* =================================================
            APPLY FILTER
         ================================================= */
@@ -773,7 +315,6 @@ function renderCalendar() {
                     event.category ===
                     selectedCategory
             );
-
 
 
         /* =================================================
@@ -806,7 +347,6 @@ function renderCalendar() {
         );
 
 
-
         /* =================================================
            DATE CLICK
         ================================================= */
@@ -823,7 +363,6 @@ function renderCalendar() {
         );
 
 
-
         calendarGrid.appendChild(
             dayElement
         );
@@ -831,7 +370,6 @@ function renderCalendar() {
     }
 
 }
-
 
 
 /* =========================================================
@@ -847,7 +385,6 @@ function getEventsForDate(date) {
     );
 
 }
-
 
 
 /* =========================================================
@@ -870,7 +407,6 @@ function showEventsForDate(
         formatDate(
             date
         );
-
 
 
     /* =====================================================
@@ -905,7 +441,6 @@ function showEventsForDate(
         return;
 
     }
-
 
 
     /* =====================================================
@@ -979,7 +514,6 @@ function showEventsForDate(
 }
 
 
-
 /* =========================================================
    SECTION 08
    FORMAT DATE
@@ -1012,10 +546,12 @@ function formatDate(
 }
 
 
-
 /* =========================================================
    SECTION 09
    CATEGORY DISPLAY NAMES
+
+   These category names remain available for the future
+   Admin Panel and official school calendar data.
 ========================================================= */
 
 function getCategoryName(
@@ -1025,26 +561,20 @@ function getCategoryName(
 
     const names = {
 
-
         academic:
             "Academic",
-
 
         sports:
             "Sports",
 
-
         cultural:
             "Cultural",
-
 
         wellbeing:
             "Wellbeing",
 
-
         holiday:
             "School Holiday",
-
 
         "bhutan-holiday":
             "Bhutan Public Holiday"
@@ -1059,7 +589,6 @@ function getCategoryName(
     );
 
 }
-
 
 
 /* =========================================================
@@ -1086,7 +615,6 @@ previousMonth.addEventListener(
 );
 
 
-
 /* =========================================================
    SECTION 11
    NEXT MONTH
@@ -1109,7 +637,6 @@ nextMonth.addEventListener(
 
     }
 );
-
 
 
 /* =========================================================
@@ -1135,7 +662,6 @@ todayButton.addEventListener(
 );
 
 
-
 /* =========================================================
    SECTION 13
    FILTER
@@ -1153,7 +679,6 @@ eventFilter.addEventListener(
 
     }
 );
-
 
 
 /* =========================================================
@@ -1188,7 +713,6 @@ function clearEventPanel() {
     `;
 
 }
-
 
 
 /* =========================================================
